@@ -1,4 +1,4 @@
-En este repositorio se muestra un CRUD con C# utilizando el enfoque Code First. El programa realiza todas las operaciones base a un usuario. En este mini-proyecto se utiliza:
+En este repositorio se muestra un CRUD con C# utilizando el enfoque Code First y usando la arquitectura MVC. El programa realiza todas las operaciones base a un usuario. En este mini-proyecto se utiliza:
 
 
 C# con ASP.NET Core.     
