@@ -1,0 +1,61 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model List<AppCRUD.Models.Empleado>;
+<div class="row">
+    <div class="col-sm-8 offset-sm-2">
+        <h2>Lista de empleados</h2>
+        <a asp-controller="Empleado" asp-action="Nuevo" class="btn btn-success mb-3">Nuevo</a>
+        <table class="table tabla-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre completo</th>
+                    <th>Correo</th>
+                    <th>Fecha de contrato</th>
+                    <th>Activo</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var item in Model)
+                {
+                    <tr>
+                        <td>@item.IdEmpleado</td>
+                        <td>@item.NombreCompleto</td>
+                        <td>@item.Correo</td>
+                        <td>@item.FechaContratacion.ToString("dd/MM/yyyy")</td>
+                        <td>@(item.Activo ? "SI" : "NO")</td>
+                        <td>
+                            <a
+                                asp-controller="Empleado" 
+                                asp-action="Editar" 
+                                asp-route-id="@item.IdEmpleado" 
+                                class="btn btn-primary mb-3">
+                                Editar
+                            </a>
+
+                            <a asp-controller="Empleado" 
+                                 asp-action="Eliminar"
+                                asp-route-id="@item.IdEmpleado"
+                                onclick="return confirmar()"
+                                class="btn btn-danger mb-3">
+                                Eliminar
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        function confirmar() {
+            return confirm("Esta seguro de eliminar el empleado?")
+        }
+    </script>
+}
