@@ -1,11 +1,18 @@
-En este repositorio se muestra un CRUD con C# utilizando el enfoque Code First y usando la arquitectura MVC. El programa realiza todas las operaciones base a un usuario. En este mini-proyecto se utiliza:
+This repository demonstrates a CRUD application built with C# using the Code First approach and MVC architecture. The program performs all basic operations for a user entity.
+
+Technologies used in this mini-project:
 
 
-C# con ASP.NET Core.     
-Razor pages con HTML.    
-Uso de los métodos HTTP.    
-Entity Framework Core.   
-Code first con SQL Server.    
-Todas las operaciones CRUD.   
+C# with ASP.NET Core.
+
+Razor Pages with HTML.
+
+Implementation of HTTP Methods.
+
+Entity Framework Core.
+
+Code First with SQL Server.
+
+Full CRUD operations.
 
 
